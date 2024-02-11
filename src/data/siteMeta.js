@@ -11,19 +11,19 @@ import logoGolang from '@/images/logos/icons8-golang.svg'
 import logoKubernetes from '@/images/logos/kubernetes.svg'
 import logoCaptainhook from '@/images/logos/captainhook.svg'  
 const siteMeta = {
-    title: "Brian Ketelsen",
-    description: "Brian Ketelsen is a developer advocate, keynote speaker, author, and open source practitioner.",
-    copyright: "Brian Ketelsen, CC-BY-SA",
+    title: "Abhi Sareen",
+    description: "Abhi is a Computer Science Student with a Flair for Cybersecurity, DevOps, Self Hosting + Open Source & IOT",
+    copyright: "Abhimanyu Sareen, CC-BY-SA",
     author: {
-        name: "Brian Ketelsen",
-        email: "me@brian.dev",
-        twitter: "https://twitter.com/bketelsen",
-        mastodon: "https://tty0.social/@bketelsen",
-        instagram: "https://instagram.com/bketelsen",
-        github: "https://github.com/bketelsen",
-        linkedin: "https://linkedin.com/in/brianketelsen",
-        twitch: "https://twitch.tv/bketelsen",
-        youtube: "https://youtube.com/@bketelsen",
+        name: "Abhi Sareen",
+        email: "avs7412@psu.edu",
+        // twitter: "https://twitter.com/bketelsen",
+        // mastodon: "https://tty0.social/@bketelsen",
+        // instagram: "https://instagram.com/bketelsen",
+        github: "https://github.com/CryptoRhinoGH/",
+        linkedin: "https://linkedin.com/in/abhimanyu-sareen",
+        // twitch: "https://twitch.tv/bketelsen",
+        // youtube: "https://youtube.com/@bketelsen",
     },
     siteUrl: "https://brian.dev"
 }

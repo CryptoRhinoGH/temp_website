@@ -13,12 +13,11 @@ import {
   MastodonIcon
 } from '@/components/SocialIcons'
 
-
-import image3 from '@/images/photos/1102.jpg'
-import image2 from '@/images/photos/20150716-070618871-3.jpg'
-import image1 from '@/images/photos/bike.jpg'
-import image5 from '@/images/photos/band.jpg'
-import image4 from '@/images/photos/BW013.jpg'
+import image1 from '@/images/photos/home/fam.jpeg'
+import image2 from '@/images/photos/home/liberty.jpeg'
+import image3 from '@/images/photos/home/me1.jpeg'
+import image4 from '@/images/photos/home/nittany.jpeg'
+// import image5 from '@/images/photos/band.jpg'
 
 
 import { generateRssFeed } from '@/lib/generateRssFeed'
@@ -181,7 +180,7 @@ function Resume() {
           </li>
         ))}
       </ol>
-      <Button href="https://linkedin.com/in/brianketelsen" variant="secondary" className="group mt-6 w-full">
+      <Button href={siteMeta.author.linkedin} variant="secondary" className="group mt-6 w-full">
                More on LinkedIn 
         <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
       </Button>
@@ -195,7 +194,7 @@ function Photos() {
   return (
     <div className="mt-16 sm:mt-20">
       <div className="-my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8">
-        {[image1, image2, image3, image4, image5].map((image, imageIndex) => (
+        {[image1, image2, image3, image4].map((image, imageIndex) => (
           <div
             key={image.src}
             className={clsx(
@@ -240,38 +239,37 @@ export default function Home({ articles }) {
       <Container className="mt-9">
         <div className="max-w-2xl text-lg">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-            Cloud Advocate, hacker, and open source enthusiast.
+            Open Source Savant, Cybersecurity Crusader, and Code Connoisseur
           </h1>
           <p className="mt-6 prose dark:prose-invert">
-            I’m Brian, and I teach people how to use the Cloud. I’ve been active in Open Source for as long as I’ve been coding &mdash; and that’s a long time.
+            Hi, I'm Abhi! For me, programming is not just a profession; it's a conversation with the future. A Computer Science student by day, and an open-source contributor by night, I find joy in bringing ideas to life through code.
           </p>
           <p className="mt-6 prose dark:prose-invert">
-            With some friends, I wrote a <a href="https://www.manning.com/books/go-in-action">book about the Go programming language</a>.
-             I’ve given many <Link href={"/speaking"} >talks</Link> about Go, Distributed Computing, and programming in general.
+            My passion extends beyond just writing software. It's about creating ecosystems where technology serves us in smarter, more meaningful ways. Join me as we navigate the complexities of cybersecurity, dive into the depths of DevOps, and contribute to the rich tapestry of open-source projects.
           </p>
-          <p className="mt-6 prose dark:prose-invert">
+          {/* <p className="mt-6 prose dark:prose-invert">
             Poke around and see what I’m up to. It’s all open source, so feel free to contribute.
-          </p>
+          </p> */}
           <div className="mt-6 flex gap-6">
-            <SocialLink
+            {/* <SocialLink
               href={siteMeta.author.twitter}
               aria-label="Follow on Twitter"
               icon={TwitterIcon}
-            />
-            <SocialLink
+            /> */}
+            {/* <SocialLink
               href={siteMeta.author.mastodon}
               aria-label="Follow on Mastodon"
               icon={MastodonIcon}
               rel="me"
-            />
+            /> */}
 
-            <SocialLink
+            {/* <SocialLink
               href={siteMeta.author.instagram}
               aria-label="Follow on Instagram"
               icon={InstagramIcon}
-            />
+            /> */}
             <SocialLink
-              href="https://github.com"
+              href={siteMeta.author.github}
               aria-label="Follow on GitHub"
               icon={GitHubIcon}
             />

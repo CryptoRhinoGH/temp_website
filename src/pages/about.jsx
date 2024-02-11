@@ -110,15 +110,15 @@ export default function About() {
           </div>
           <div className="lg:pl-20">
             <ul role="list">
-              <SocialLink href={siteMeta.author.twitter} icon={TwitterIcon}>
+              {/* <SocialLink href={siteMeta.author.twitter} icon={TwitterIcon}>
                 Follow on Twitter
-              </SocialLink>
-              <SocialLink href={siteMeta.author.mastodon} icon={MastodonIcon} className="mt-4">
+              </SocialLink> */}
+              {/* <SocialLink href={siteMeta.author.mastodon} icon={MastodonIcon} className="mt-4">
                 Follow on Mastodon
-              </SocialLink>
-              <SocialLink href={siteMeta.author.instagram} icon={InstagramIcon} className="mt-4">
+              </SocialLink> */}
+              {/* <SocialLink href={siteMeta.author.instagram} icon={InstagramIcon} className="mt-4">
                 Follow on Instagram
-              </SocialLink>
+              </SocialLink> */}
               <SocialLink href={siteMeta.author.github} icon={GitHubIcon} className="mt-4">
                 Follow on GitHub
               </SocialLink>
