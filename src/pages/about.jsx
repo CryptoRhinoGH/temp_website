@@ -4,13 +4,10 @@ import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
 import {
-  TwitterIcon,
-  InstagramIcon,
   GitHubIcon,
   LinkedInIcon,
-  MastodonIcon
 } from '@/components/SocialIcons'
-import portraitImage from '@/images/brian-head.jpg'
+import portraitImage from '@/images/photos/home/headshot.JPG'
 import siteMeta from '@/data/siteMeta'
 import { NextSeo } from 'next-seo';
 
@@ -41,24 +38,28 @@ function MailIcon(props) {
 }
 
 export default function About() {
+    const headingStyle = {
+        fontSize: '1.5em', // Adjust the relative font size as needed
+        fontWeight: 'bold',
+    };
   return (
     <>
       <NextSeo
-        title="About - Brian Ketelsen"
+        title="About - Abhimanyu Sareen"
         description={siteMeta.description}
-        canonical="https://brian.dev/about"
+        canonical="https://asareen.in/about"
         openGraph={{
-          url: 'https://brian.dev/about',
+          url: 'https://asareen.in/about',
           images: [
             {
-              url: `https://og.brian.dev/api/og?title=About&desc=${siteMeta.description}`,
+              url: `https://asareen.in/api/og?title=About&desc=${siteMeta.description}`,
               width: 1200,
               height: 600,
               alt: 'Og Image Alt',
               type: 'image/jpeg',
             }
           ],
-          siteName: 'brian.dev',
+          siteName: 'asareen.in',
         }}
       />
       <Container className="mt-16 sm:mt-32">
@@ -75,37 +76,27 @@ export default function About() {
           </div>
           <div className="lg:order-first lg:row-span-2">
             <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-              I’m Brian Ketelsen. I live in Florida, where I help people
-              across the world learn the Cloud.
+                I&apos;m Abhi, Bridging Worlds with Code, Security, and Open Source Dedication.
             </h1>
             <div className="mt-6 text-lg prose space-y-7 dark:prose-invert text-zinc-600 dark:text-zinc-400">
-              <p>
-                Howdy! Thanks for stopping by. I’m Brian and I’ve been doing technology
-                things since <a href="https://en.wikipedia.org/wiki/Acoustic_coupler">acoustic
-                  modem couplers</a> were a thing. I love Open Source and exploring different programming languages.
-                Some highlights about me and my activities:
-              </p>
-              <p>
-                <b>Army Veteran:</b> Bradley Fighting Vehicle Gunner, Infantry, 1st Armored Division
-              </p>
-              <p>
-                <b>Father of <s>four</s> five</b> with <s>19</s> 21 years difference between oldest and youngest child
-              </p>
-              <p>
-                <b>Co-founded GopherCon</b> <a href="https://gophercon.com">the largest conference for Go developers</a>.
-              </p>
-              <p>
-                <b>Co-authored</b> <a href="https://www.amazon.com/Go-Action-William-Kennedy/dp/1617291781">Go In Action</a> for Manning Publishing.
-              </p>
-              <p>
-                <b>Co-wrote</b> Skynet and SkyDNS with Erik St. Martin, which was eventually morphed into the DNS service discovery that powers Kubernetes.
-              </p>
-              <p>
-                <b>Contributed</b> to the largest projects that power the Internet. Go, Kubernetes, Etcd, and so many more.
-              </p>
-              <p>
-                I love Open Source, learning in public, and sharing what I learn with others.
-              </p>
+                <p>
+                Hello, I&apos;m Abhimanyu (I prefer me Abhi!), a Computer Science junior at Penn State with a keen eye on the future of technology. My academic path is enriched by a minor in Cybersecurity, reflecting my commitment to safeguarding our digital tomorrow. My explorations in open-source software and the Internet of Things (IoT) are not just academic pursuits but passions that light up my world.
+                </p>
+                <p>
+                <b>From Concept to Creation:</b> The pinnacle of my technical journey so far has been developing an advanced IoT home automation system. This endeavor wasn't just about programming a Raspberry Pi or integrating various devices. It was about creating a seamless ecosystem where technology intuitively responds to human needs. By merging the capabilities of Home Assistant with the power of Google Cloud Platform, working along with self created IoT devices and sensors, I transformed a concept into a living, breathing digital assistant that enhances the comfort and efficiency of home environments.
+                </p>
+                <p>
+                <b>A Future Forged in Code:</b> Looking ahead, my ambitions stretch far beyond the confines of academia. I envision a career where I can continue to contribute to the forefront of technology, particularly in open-source initiatives. With every project I undertake, I aim to push the boundaries of what's possible, crafting solutions that not only solve today's challenges but also anticipate the needs of tomorrow.
+                </p>
+                <p>
+                <b>Won Tron Hackathon Season 1</b> in the GameFi category with the TronNinjas Team, securing a $50,000 prize.
+                </p>
+                <p>
+                <b>Achieved 1st runner-up in GameFi</b> and <b>2nd runner-up in Web3 category</b> during Hackathon Season 2, with a $15,000 prize.
+                </p>
+                <p>
+                Passionate about Open Source, pushing the boundaries of tech, and sharing knowledge with the community.
+                </p>
             </div>
           </div>
           <div className="lg:pl-20">

@@ -35,3 +35,7 @@ yarn-error.log*
 /public/rss/
 
 .env
+
+#log files
+nextstart.out
+nextdev.out

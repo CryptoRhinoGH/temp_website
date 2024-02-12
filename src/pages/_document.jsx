@@ -1,4 +1,5 @@
 import { Head, Html, Main, NextScript } from 'next/document'
+import  siteMeta from '@/data/siteMeta'
 
 const modeScript = `
   let darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
@@ -50,12 +51,12 @@ export default function Document() {
           type="application/feed+json"
           href={`${process.env.NEXT_PUBLIC_SITE_URL}/rss/feed.json`}
         />
-        <link rel="me" href="https://tty0.social/@bketelsen" />
+        <link rel="me" href={siteMeta.author.linkedin} />
       </Head>
       <body className="flex h-full flex-col bg-zinc-50 dark:bg-black">
         <Main />
         <NextScript />
-        <div style={{display: 'none'}}>        <a rel="me" href="https://tty0.social/@bketelsen">Mastodon</a>
+        <div style={{display: 'none'}}>        <a rel="me" href={siteMeta.author.linkedin}>LinkedIn</a>
 </div>
       </body>
     </Html>

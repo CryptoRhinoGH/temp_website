@@ -25,7 +25,7 @@ export function Footer() {
                 <NavLink href="/projects">Projects</NavLink>
                 <NavLink href="/speaking">Speaking</NavLink>
                 <NavLink href="/uses">Uses</NavLink>
-                <NavLink href="/liam">Liam</NavLink>
+                {/* <NavLink href="/liam">Liam</NavLink> */}
               </div>
               <p className="text-sm text-zinc-600 dark:text-zinc-300">
                   &copy; {new Date().getFullYear()} {siteMeta.copyright} 

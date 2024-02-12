@@ -150,7 +150,7 @@ function Resume() {
         {resume.map((role, roleIndex) => (
           <li key={roleIndex} className="flex gap-4">
             <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
-              <Image src={role.logo} alt="" className="h-7 w-7" unoptimized />
+              <Image src={role.logo} alt="" className="h-9 w-9" unoptimized />
             </div>
             <dl className="flex flex-auto flex-wrap gap-x-2">
               <dt className="sr-only">Company</dt>
@@ -189,51 +189,54 @@ function Resume() {
 }
 
 function Photos() {
-  let rotations = ['rotate-2', '-rotate-2', 'rotate-2', 'rotate-2', '-rotate-2']
-
-  return (
-    <div className="mt-16 sm:mt-20">
-      <div className="-my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8">
-        {[image1, image2, image3, image4].map((image, imageIndex) => (
-          <div
-            key={image.src}
-            className={clsx(
-              'relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800 sm:w-72 sm:rounded-2xl',
-              rotations[imageIndex % rotations.length]
-            )}
-          >
-            <Image
-              src={image}
-              alt=""
-              sizes="(min-width: 640px) 18rem, 11rem"
-              className="absolute inset-0 h-full w-full object-cover"
-            />
-          </div>
-        ))}
+    let rotations = ['rotate-2', '-rotate-2', 'rotate-2', '-rotate-2', 'rotate-2']
+    let images = [image1, image2, image3, image4];
+  
+    return (
+      <div className="mt-16 sm:mt-20">
+        <div className="-my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8">
+          {images.map((image, imageIndex) => (
+            <div
+              key={image.src}
+              className={clsx(
+                'relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800 sm:w-72 sm:rounded-2xl',
+                rotations[imageIndex % rotations.length],
+                // Hide the third and fourth image on mobile
+                (imageIndex == 2 || imageIndex == 3) ? 'hidden sm:block' : ''
+              )}
+            >
+              <Image
+                src={image}
+                alt=""
+                sizes="(min-width: 640px) 18rem, 11rem"
+                className="absolute inset-0 h-full w-full object-cover"
+              />
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
-  )
-}
+    )
+  }
 
 export default function Home({ articles }) {
   return (
     <>
     <NextSeo
-      title="Brian Ketelsen"
+      title="Abhi Sareen"
       description={siteMeta.description}
-      canonical="https://brian.dev/"
+      canonical="https://asareen.in/"
       openGraph={{
-        url: 'https://brian.dev',
+        url: 'https://asareen.in',
         images: [
           {
-            url: `https://og.brian.dev/api/og?title=${siteMeta.title}&desc=${siteMeta.description}`,
+            url: `https://asareen.in/api/og?title=${siteMeta.title}&desc=${siteMeta.description}`,
             width: 1200,
             height: 600,
             alt: 'Og Image Alt',
             type: 'image/jpeg',
           }
         ],
-        siteName: 'brian.dev',
+        siteName: 'asareen.in',
       }}
     />
       <Container className="mt-9">
@@ -242,10 +245,10 @@ export default function Home({ articles }) {
             Open Source Savant, Cybersecurity Crusader, and Code Connoisseur
           </h1>
           <p className="mt-6 prose dark:prose-invert">
-            Hi, I'm Abhi! For me, programming is not just a profession; it's a conversation with the future. A Computer Science student by day, and an open-source contributor by night, I find joy in bringing ideas to life through code.
+            Hi, I&apos;m Abhi! For me, programming is not just a profession; it&apos;s a conversation with the future. A Computer Science student by day, and an open-source contributor by night, I find joy in bringing ideas to life through code.
           </p>
           <p className="mt-6 prose dark:prose-invert">
-            My passion extends beyond just writing software. It's about creating ecosystems where technology serves us in smarter, more meaningful ways. Join me as we navigate the complexities of cybersecurity, dive into the depths of DevOps, and contribute to the rich tapestry of open-source projects.
+            My passion extends beyond just writing software. It&apos;s about creating ecosystems where technology serves us in smarter, more meaningful ways. Join me as we navigate the complexities of cybersecurity, dive into the depths of DevOps, and contribute to the rich tapestry of open-source projects.
           </p>
           {/* <p className="mt-6 prose dark:prose-invert">
             Poke around and see what I’m up to. It’s all open source, so feel free to contribute.

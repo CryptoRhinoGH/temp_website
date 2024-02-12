@@ -29,21 +29,21 @@ export default function Uses() {
   return (
     <>
     <NextSeo
-      title="Uses - Brian Ketelsen"
+      title="Uses - Abhimanyu Sareen"
       description={siteMeta.description}
-      canonical="https://brian.dev/uses"
+      canonical="https://asareen.in/uses"
       openGraph={{
-        url: 'https://brian.dev/uses',
+        url: 'https://asareen.in/uses',
         images: [
           {
-            url: `https://og.brian.dev/api/og?title=Uses&desc=Things I use every day to get my work done.`,
+            url: `https://asareen.in/api/og?title=Uses&desc=Things I use every day to get my work done.`,
             width: 1200,
             height: 600,
             alt: 'Og Image Alt',
             type: 'image/jpeg',
           }
         ],
-        siteName: 'brian.dev',
+        siteName: 'asareen.in',
       }}
     />
       <SimpleLayout
@@ -52,19 +52,28 @@ export default function Uses() {
       >
         <div className="space-y-20">
           <ToolsSection title="Workstation">
-            <Tool title="13” MacBook Pro, M1 Max, 64GB RAM (2021)">
+            <Tool title="13” MacBook Air, M1, 16GB RAM (2020)">
               I don&apos;t know how Apple makes such a tiny laptop so fast and responsive, no matter what load I put on it.
             </Tool>
-            <Tool title="Dell XPS 8950">
-              12th Generation i7 with oodles of memory and 4TB of NVMe drives running Bluefin Linux.
+            <Tool title="Raspberry Pi(s)">
+              <b>Minipi:</b> 4GB RPi 4 running Home Assistant and various locally hosted tools<br/>
+              <b>Megapi:</b> 8GB RPi 4 used as my Dev environment
             </Tool>
-            <Tool title="Moonlander Keyboard">
-              I had terrible RSI problems until I switched to the Moonlander and the Apple Magic Trackpad.
+            <Tool title="HomeServer">
+              An old pc with i5 and 4GB Ram
             </Tool>
-            <Tool title="Apple Magic Trackpad">
-              It even works on Linux. Who knew?
+          </ToolsSection>
+          <ToolsSection title="Software">
+            All my devices are connected to each other through Tailscale (I plan on transitioning to headscale instead soon)
+            <Tool title="OS">
+                Running Debian on the Raspberry Pis and the HomeServer<br/>
+                Macos with a dual boot with NixOS (thanks to Asahi linux drivers for M1) on my Macbook
             </Tool>
-
+            <Tool title="Docker">
+                Running Home Assistant, MQTT on Minipi<br/>
+                Running this website, a few selfhosted applications, a local jellyfin for improved speeds on Megapi<br/>
+                Running Sonarr, Radarr, Jellyfin along with some self-created open source softwares, dockerized, on my HomeServer
+            </Tool>
           </ToolsSection>
 
         </div>

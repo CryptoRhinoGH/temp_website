@@ -2,6 +2,7 @@
 import logoAmazon from '@/images/logos/aws.svg'
 import logoClarity from '@/images/logos/clarity.jpg'
 import logoMicrosoft from '@/images/logos/azure.svg'
+import logoCadence from '@/images/logos/cadence.png'
 import logoXOR from '@/images/logos/xor.jpg'
 import logoVanilla from '@/images/logos/vanilla.svg'
 import logoFleek from '@/images/logos/fleeksvg.svg'
@@ -25,40 +26,40 @@ const siteMeta = {
         // twitch: "https://twitch.tv/bketelsen",
         // youtube: "https://youtube.com/@bketelsen",
     },
-    siteUrl: "https://brian.dev"
+    siteUrl: "https://asareen.in"
 }
  export const resume = [
+    // {
+    //   company: 'Cadence Design Systems',
+    //   title: 'Intern',
+    //   logo: logoAmazon,
+    //   start: 'May 2023',
+    //   end: {
+    //     label: 'Present',
+    //     dateTime: new Date().getFullYear(),
+    //   },
+    // },
     {
-      company: 'Amazon',
-      title: 'Principal Developer Advocate',
-      logo: logoAmazon,
-      start: '2022',
-      end: {
-        label: 'Present',
-        dateTime: new Date().getFullYear(),
-      },
+      company: 'Cadence Design Systems',
+      title: 'Intern',
+      logo: logoCadence,
+      start: 'May 2023',
+      end: 'August 2023',
     },
     {
-      company: 'Microsoft',
-      title: 'Principal Cloud Developer Advocate',
-      logo: logoMicrosoft,
-      start: '2017',
-      end: '2022',
-    },
-    {
-      company: 'XOR Data Exchange',
-      title: 'CIO',
+      company: 'TronNinjas',
+      title: 'Lead Blockchain Development Engineer',
       logo: logoXOR,
-      start: '2014',
-      end: '2016',
+      start: 'Oct 2021',
+      end: 'April 2023',
     },
-    {
-      company: 'Clarity Services, Inc.',
-      title: 'COO',
-      logo: logoClarity,
-      start: '2008',
-      end: '2014',
-    },
+    // {
+    //   company: 'Clarity Services, Inc.',
+    //   title: 'COO',
+    //   logo: logoClarity,
+    //   start: '2008',
+    //   end: '2014',
+    // },
   ]
 export const projects = [
   {
