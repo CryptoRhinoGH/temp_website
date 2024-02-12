@@ -23,21 +23,21 @@ export default function Projects() {
   return (
     <>
     <NextSeo
-      title="Projects - Brian Ketelsen"
+      title="Projects - Abhimanyu Sareen"
       description={siteMeta.description}
-      canonical="https://brian.dev/projects"
+      canonical="https://asareen.in/projects"
       openGraph={{
-        url: 'https://brian.dev/projects',
+        url: 'https://asareen.in/projects',
         images: [
           {
-            url: `https://og.brian.dev/api/og?title=Projects&desc=${headline}`,
+            url: `https://asareen.in/api/og?title=Projects&desc=${headline}`,
             width: 1200,
             height: 600,
             alt: 'Og Image Alt',
             type: 'image/jpeg',
           }
         ],
-        siteName: 'brian.dev',
+        siteName: 'asareen.in',
       }}
     />
       <SimpleLayout

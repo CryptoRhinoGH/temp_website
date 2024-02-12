@@ -7,6 +7,7 @@ import logoXOR from '@/images/logos/xor.jpg'
 import logoVanilla from '@/images/logos/vanilla.svg'
 import logoFleek from '@/images/logos/fleeksvg.svg'
 import logoUblue from '@/images/logos/ublue.png'
+import logoTN from '@/images/logos/tronninjas.png'
 
 import logoGolang from '@/images/logos/icons8-golang.svg'
 import logoKubernetes from '@/images/logos/kubernetes.svg'
@@ -16,7 +17,7 @@ const siteMeta = {
     description: "Abhi is a Computer Science Student with a Flair for Cybersecurity, DevOps, Self Hosting + Open Source & IOT",
     copyright: "Abhimanyu Sareen, CC-BY-SA",
     author: {
-        name: "Abhi Sareen",
+        name: "Abhimanyu Sareen",
         email: "avs7412@psu.edu",
         // twitter: "https://twitter.com/bketelsen",
         // mastodon: "https://tty0.social/@bketelsen",
@@ -49,7 +50,7 @@ const siteMeta = {
     {
       company: 'TronNinjas',
       title: 'Lead Blockchain Development Engineer',
-      logo: logoXOR,
+      logo: logoTN,
       start: 'Oct 2021',
       end: 'April 2023',
     },

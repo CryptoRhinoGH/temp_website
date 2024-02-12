@@ -20,16 +20,20 @@ export function Footer() {
         <div className="border-t border-zinc-100 pt-10 pb-16 dark:border-zinc-700/40">
           <Container.Inner>
             <div className="flex flex-col items-center justify-between gap-6 sm:flex-row">
-              <div className="flex gap-6 text-sm font-medium text-zinc-800 dark:text-zinc-200">
+                <div className="flex gap-6 text-sm font-medium text-zinc-800 dark:text-zinc-200">
                 <NavLink href="/about">About</NavLink>
                 <NavLink href="/projects">Projects</NavLink>
                 <NavLink href="/speaking">Speaking</NavLink>
                 <NavLink href="/uses">Uses</NavLink>
-                {/* <NavLink href="/liam">Liam</NavLink> */}
+                </div>
+                <div className="max-w-xl text-center text-sm text-zinc-600 dark:text-zinc-300">
+                <p>
+                  &copy; {new Date().getFullYear()} {siteMeta.author.name}. All rights reserved.
+                </p>
+                <p>
+                  Any personal information and images on this website are for presentation purposes only. They are not to be shared or used without the explicit permission of {siteMeta.author.name}.
+                </p>
               </div>
-              <p className="text-sm text-zinc-600 dark:text-zinc-300">
-                  &copy; {new Date().getFullYear()} {siteMeta.copyright} 
-              </p>
             </div>
           </Container.Inner>
         </div>

@@ -41,21 +41,21 @@ export default function ArticlesIndex({ articles }) {
   return (
     <>
     <NextSeo
-      title="Articles - Brian Ketelsen"
+      title="Articles - Abhimanyu Sareen"
       description={siteMeta.description}
-      canonical="https://brian.dev/articles"
+      canonical="https://asareen.in/articles"
       openGraph={{
-        url: 'https://brian.dev/articles',
+        url: 'https://asareen.in/articles',
         images: [
           {
-            url: `https://og.brian.dev/api/og?title=Articles&desc=${headline}`,
+            url: `https://asareen.in/api/og?title=Articles&desc=${headline}`,
             width: 1200,
             height: 600,
             alt: 'Og Image Alt',
             type: 'image/jpeg',
           }
         ],
-        siteName: 'brian.dev',
+        siteName: 'asareen.in',
       }}
     />
       <SimpleLayout

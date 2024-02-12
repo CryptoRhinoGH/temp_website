@@ -34,7 +34,7 @@ export default function App({ Component, pageProps, router }) {
 
   return (
    <>
-   <DefaultSeo {...SEO} />
+   <DefaultSeo {...SEO} dangerouslySetAllPagesToNoIndex={true} dangerouslySetAllPagesToNoFollow={true}/>
         <MDXProvider components={components}>
       <div className="fixed inset-0 flex justify-center sm:px-8">
         <div className="flex w-full max-w-7xl lg:px-8">
