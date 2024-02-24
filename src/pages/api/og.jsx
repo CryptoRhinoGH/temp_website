@@ -22,10 +22,12 @@ function wrapText(text, maxCharsPerLine) {
   }
 
 export default async function handler(req, res) {
-  const { title = 'testtitle', desc = 'testdesc'} = req.query;
+  var { title = 'Abhi Sareen', desc = ''} = req.query;
+  title = title.replace(/&/g, '&amp;');
+  desc = desc.replace(/&/g, '&amp;');
 
-  const width = 1000;
-  const height = 500;
+  const width = 1200;
+  const height = 640;
   const background = '#27272a'; // The background color of your image
   const headshotPath = path.join(process.cwd(), 'src/images/photos/home/headshot.JPG');
 
@@ -51,7 +53,7 @@ export default async function handler(req, res) {
       },
     ])
     .toBuffer();
-    const maxCharsPerLine = 25; // Adjust max chars per line as needed
+    const maxCharsPerLine = 30; // Adjust max chars per line as needed
     const descLines = wrapText(desc, maxCharsPerLine);
     // Create the text SVG
     const textSVG = `
@@ -61,13 +63,13 @@ export default async function handler(req, res) {
         .desc { fill: white; font-size: 34px; font-family: 'Open Sans', Helvetica, sans-serif; white-space: pre; }
         .footer { fill: white; font-size: 24px; font-family: 'Open Sans', Helvetica, sans-serif; }
         </style>
-        <text x="100" y="130" class="title">${title}</text>
+        <text x="100" y="120" class="title">${title}</text>
         ${descLines
         .map(
-            (line, i) => `<text x="100" y="${190 + i * 40}" class="desc">${line}</text>`
+            (line, i) => `<text x="100" y="${240 + i * 40}" class="desc">${line}</text>`
         )
         .join('')}
-        <text x="100" y="460" class="footer">asareen.in</text>
+        <text x="100" y="560" class="footer">asareen.in</text>
     </svg>
     `;
 
@@ -98,8 +100,10 @@ export default async function handler(req, res) {
         left: 0,
       },
     ])
+    .jpeg()
     .toBuffer();
 
-  res.setHeader('Content-Type', 'image/png');
+  res.setHeader('Content-Type', 'image/jpg');
+  res.setHeader('Cache-Control', 'public, max-age=300'); // Example: cache for 1 day
   res.send(imageBuffer);
 }

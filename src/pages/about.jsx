@@ -52,9 +52,9 @@ export default function About() {
           url: 'https://asareen.in/about',
           images: [
             {
-              url: `https://asareen.in/api/og?title=About&desc=${siteMeta.description}`,
+              url: `https://asareen.in/api/og?title=About&desc=${encodeURIComponent(siteMeta.description)}`,
               width: 1200,
-              height: 600,
+              height: 800,
               alt: 'Og Image Alt',
               type: 'image/jpeg',
             }
@@ -62,7 +62,7 @@ export default function About() {
           siteName: 'asareen.in',
         }}
       />
-      <Container className="mt-16 sm:mt-32">
+      <Container className="mt-16 sm:mt-24">
         <div className="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">
           <div className="lg:pl-20">
             <div className="max-w-xs px-2.5 lg:max-w-none">
@@ -83,10 +83,10 @@ export default function About() {
                 Hello, I&apos;m Abhimanyu (I prefer me Abhi!), a Computer Science junior at Penn State with a keen eye on the future of technology. My academic path is enriched by a minor in Cybersecurity, reflecting my commitment to safeguarding our digital tomorrow. My explorations in open-source software and the Internet of Things (IoT) are not just academic pursuits but passions that light up my world.
                 </p>
                 <p>
-                <b>From Concept to Creation:</b> The pinnacle of my technical journey so far has been developing an advanced IoT home automation system. This endeavor wasn't just about programming a Raspberry Pi or integrating various devices. It was about creating a seamless ecosystem where technology intuitively responds to human needs. By merging the capabilities of Home Assistant with the power of Google Cloud Platform, working along with self created IoT devices and sensors, I transformed a concept into a living, breathing digital assistant that enhances the comfort and efficiency of home environments.
+                <b>From Concept to Creation:</b> The pinnacle of my technical journey so far has been developing an advanced IoT home automation system. This endeavor wasn&apos;t just about programming a Raspberry Pi or integrating various devices. It was about creating a seamless ecosystem where technology intuitively responds to human needs. By merging the capabilities of Home Assistant with the power of Google Cloud Platform, working along with self created IoT devices and sensors, I transformed a concept into a living, breathing digital assistant that enhances the comfort and efficiency of home environments.
                 </p>
                 <p>
-                <b>A Future Forged in Code:</b> Looking ahead, my ambitions stretch far beyond the confines of academia. I envision a career where I can continue to contribute to the forefront of technology, particularly in open-source initiatives. With every project I undertake, I aim to push the boundaries of what's possible, crafting solutions that not only solve today's challenges but also anticipate the needs of tomorrow.
+                <b>A Future Forged in Code:</b> Looking ahead, my ambitions stretch far beyond the confines of academia. I envision a career where I can continue to contribute to the forefront of technology, particularly in open-source initiatives. With every project I undertake, I aim to push the boundaries of what&apos;s possible, crafting solutions that not only solve today&apos;s challenges but also anticipate the needs of tomorrow.
                 </p>
                 <p>
                 <b>Won Tron Hackathon Season 1</b> in the GameFi category with the TronNinjas Team, securing a $50,000 prize.

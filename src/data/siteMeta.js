@@ -14,7 +14,7 @@ import logoKubernetes from '@/images/logos/kubernetes.svg'
 import logoCaptainhook from '@/images/logos/captainhook.svg'  
 const siteMeta = {
     title: "Abhi Sareen",
-    description: "Abhi is a Computer Science Student with a Flair for Cybersecurity, DevOps, Self Hosting + Open Source & IOT",
+    description: "I am a Computer Science Student with a Flair for Cybersecurity, DevOps, Self Hosting + Open Source & IOT",
     copyright: "Abhimanyu Sareen, CC-BY-SA",
     author: {
         name: "Abhimanyu Sareen",

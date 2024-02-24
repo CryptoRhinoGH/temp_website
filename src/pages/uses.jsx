@@ -7,7 +7,7 @@ import { SimpleLayout } from '@/components/SimpleLayout'
 function ToolsSection({ children, ...props }) {
   return (
     <Section {...props}>
-      <ul role="list" className="space-y-16">
+      <ul role="list" className="space-y-8">
         {children}
       </ul>
     </Section>
@@ -36,9 +36,9 @@ export default function Uses() {
         url: 'https://asareen.in/uses',
         images: [
           {
-            url: `https://asareen.in/api/og?title=Uses&desc=Things I use every day to get my work done.`,
+            url: `https://asareen.in/api/og?title=My%20Devices&desc=${encodeURIComponent("Things I use every day to get my work done")}`,
             width: 1200,
-            height: 600,
+            height: 800,
             alt: 'Og Image Alt',
             type: 'image/jpeg',
           }
@@ -50,7 +50,7 @@ export default function Uses() {
         title="Software I use, gadgets I love, and other things I recommend."
         intro="I get asked a lot about the things I use to build software, stay productive, or buy to fool myself into thinking I’m being productive when I’m really just procrastinating. Here’s a big list of all of my favorite stuff."
       >
-        <div className="space-y-20">
+        <div className="space-y-12">
           <ToolsSection title="Workstation">
             <Tool title="13” MacBook Air, M1, 16GB RAM (2020)">
               I don&apos;t know how Apple makes such a tiny laptop so fast and responsive, no matter what load I put on it.
@@ -64,7 +64,6 @@ export default function Uses() {
             </Tool>
           </ToolsSection>
           <ToolsSection title="Software">
-            All my devices are connected to each other through Tailscale (I plan on transitioning to headscale instead soon)
             <Tool title="OS">
                 Running Debian on the Raspberry Pis and the HomeServer<br/>
                 Macos with a dual boot with NixOS (thanks to Asahi linux drivers for M1) on my Macbook
@@ -73,6 +72,9 @@ export default function Uses() {
                 Running Home Assistant, MQTT on Minipi<br/>
                 Running this website, a few selfhosted applications, a local jellyfin for improved speeds on Megapi<br/>
                 Running Sonarr, Radarr, Jellyfin along with some self-created open source softwares, dockerized, on my HomeServer
+            </Tool>
+            <Tool title="Tailscale">
+                All my devices are connected to each other through Tailscale (I plan on transitioning to headscale instead soon)
             </Tool>
           </ToolsSection>
 

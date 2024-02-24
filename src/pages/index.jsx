@@ -229,9 +229,12 @@ export default function Home({ articles }) {
         url: 'https://asareen.in',
         images: [
           {
-            url: `https://asareen.in/api/og?title=${siteMeta.title}&desc=${siteMeta.description}`,
+            url: `https://asareen.in/api/og?title=${encodeURIComponent(siteMeta.title)}&desc=${encodeURIComponent(siteMeta.description)}`,
+            secureUrl: `https://asareen.in/api/og?title=${encodeURIComponent(siteMeta.title)}&desc=${encodeURIComponent(siteMeta.description)}`,
+            // url: "https://asareen.in/fixed/images/og/pages/home.png",
+            // secureUrl: "https://asareen.in/fixed/images/og/pages/home.png",
             width: 1200,
-            height: 600,
+            height: 640,
             alt: 'Og Image Alt',
             type: 'image/jpeg',
           }

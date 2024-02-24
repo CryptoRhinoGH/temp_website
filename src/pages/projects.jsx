@@ -24,15 +24,15 @@ export default function Projects() {
     <>
     <NextSeo
       title="Projects - Abhimanyu Sareen"
-      description={siteMeta.description}
+      description={headline}
       canonical="https://asareen.in/projects"
       openGraph={{
         url: 'https://asareen.in/projects',
         images: [
           {
-            url: `https://asareen.in/api/og?title=Projects&desc=${headline}`,
+            url: `https://asareen.in/api/og?title=Projects&desc=${encodeURIComponent(headline)}`,
             width: 1200,
-            height: 600,
+            height: 800,
             alt: 'Og Image Alt',
             type: 'image/jpeg',
           }
