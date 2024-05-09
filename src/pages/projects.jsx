@@ -60,6 +60,7 @@ export default function Projects() {
               </div>
               <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
                 <Card.Link href={project.link.href} 
+                    onClick={(e) => project.link.href === '#' && e.preventDefault()}
                     {...(project.link.href !== '#' && { target: '_blank', rel: 'noopener noreferrer' })}
                 >{project.name}</Card.Link>
               </h2>
