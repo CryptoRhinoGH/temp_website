@@ -180,7 +180,7 @@ function Resume() {
           </li>
         ))}
       </ol>
-      <Button href={siteMeta.author.linkedin} variant="secondary" className="group mt-6 w-full">
+      <Button href={siteMeta.author.linkedin} target="_blank" rel="noopener noreferrer" variant="secondary" className="group mt-6 w-full">
                More on LinkedIn 
         <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
       </Button>
@@ -243,47 +243,32 @@ export default function Home({ articles }) {
       }}
     />
       <Container className="mt-9">
-        <div className="max-w-2xl text-lg">
-          <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-            Open Source Savant, Cybersecurity Crusader, and Code Connoisseur
-          </h1>
-          <p className="mt-6 prose dark:prose-invert">
-            Hi, I&apos;m Abhi! For me, programming is not just a profession; it&apos;s a conversation with the future. A Computer Science student by day, and an open-source contributor by night, I find joy in bringing ideas to life through code.
-          </p>
-          <p className="mt-6 prose dark:prose-invert">
-            My passion extends beyond just writing software. It&apos;s about creating ecosystems where technology serves us in smarter, more meaningful ways. Join me as we navigate the complexities of cybersecurity, dive into the depths of DevOps, and contribute to the rich tapestry of open-source projects.
-          </p>
-          {/* <p className="mt-6 prose dark:prose-invert">
-            Poke around and see what I’m up to. It’s all open source, so feel free to contribute.
-          </p> */}
-          <div className="mt-6 flex gap-6">
-            {/* <SocialLink
-              href={siteMeta.author.twitter}
-              aria-label="Follow on Twitter"
-              icon={TwitterIcon}
-            /> */}
-            {/* <SocialLink
-              href={siteMeta.author.mastodon}
-              aria-label="Follow on Mastodon"
-              icon={MastodonIcon}
-              rel="me"
-            /> */}
-
-            {/* <SocialLink
-              href={siteMeta.author.instagram}
-              aria-label="Follow on Instagram"
-              icon={InstagramIcon}
-            /> */}
-            <SocialLink
-              href={siteMeta.author.github}
-              aria-label="Follow on GitHub"
-              icon={GitHubIcon}
-            />
-            <SocialLink
-              href={siteMeta.author.linkedin}
-              aria-label="Follow on LinkedIn"
-              icon={LinkedInIcon}
-            />
+        <div className="flex flex-col lg:flex-row gap-x-12 gap-y-8 lg:gap-y-0">
+          <div className="max-w-2xl text-lg flex-auto">
+            <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
+              Open Source Savant, Cybersecurity Crusader, and Code Connoisseur
+            </h1>
+            <p className="mt-6 prose dark:prose-invert">
+              Hi, I&apos;m Abhi! For me, programming is not just a profession; it&apos;s a conversation with the future. A Computer Science student by day, and an open-source contributor by night, I find joy in bringing ideas to life through code.
+            </p>
+            <p className="mt-6 prose dark:prose-invert">
+              My passion extends beyond just writing software. It&apos;s about creating ecosystems where technology serves us in smarter, more meaningful ways. Join me as we navigate the complexities of cybersecurity, dive into the depths of DevOps, and contribute to the rich tapestry of open-source projects.
+            </p>
+            <div className="mt-6 flex gap-6">
+              <SocialLink
+                href={siteMeta.author.github}
+                aria-label="Follow on GitHub"
+                icon={GitHubIcon}
+              />
+              <SocialLink
+                href={siteMeta.author.linkedin}
+                aria-label="Follow on LinkedIn"
+                icon={LinkedInIcon}
+              />
+            </div>
+          </div>
+          <div className="flex-auto">
+            <Resume />
           </div>
         </div>
       </Container>
@@ -296,8 +281,8 @@ export default function Home({ articles }) {
             ))}
           </div>
           <div className="space-y-10 lg:pl-16 xl:pl-24">
-            <Newsletter />
-            <Resume />
+            {/* <Newsletter /> */}
+            {/* <Resume /> */}
           </div>
         </div>
       </Container>
