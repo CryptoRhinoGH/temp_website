@@ -45,6 +45,8 @@ export default function Speaking() {
         ],
         siteName: 'asareen.in',
       }}
+      nofollow={true}
+      noindex={true}
     />
       <SimpleLayout
         title="I’ve spoken at events all around the world and been interviewed for many podcasts."
